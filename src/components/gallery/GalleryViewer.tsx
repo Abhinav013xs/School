@@ -26,8 +26,8 @@ export const GalleryViewer: React.FC = () => {
 
   return (
     <div className="w-full">
-      {/* Category Filter Pills */}
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10 sm:mb-12">
+      {/* Category Filter Pills (Responsive scroll on mobile, centered on desktop) */}
+      <div className="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 overflow-x-auto no-scrollbar py-2 px-1">
         {categories.map((cat) => {
           const isActive = selectedCategory === cat.key;
           return (
@@ -36,7 +36,7 @@ export const GalleryViewer: React.FC = () => {
               type="button"
               onClick={() => setSelectedCategory(cat.key)}
               className={cn(
-                "px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-200",
+                "whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 shrink-0",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron-gold",
                 isActive
                   ? "bg-academic-green text-white shadow-card"
@@ -49,8 +49,8 @@ export const GalleryViewer: React.FC = () => {
         })}
       </div>
 
-      {/* Masonry / Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {/* Masonry / Responsive Grid Layout */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
         {filteredItems.map((item, index) => (
           <div
             key={item.id}
@@ -82,8 +82,8 @@ export const GalleryViewer: React.FC = () => {
               )}
             </div>
 
-            <div className="p-5 flex flex-col flex-1">
-              <h3 className="font-serif font-semibold text-base sm:text-lg text-academic-green group-hover:text-saffron-gold-dark transition-colors mb-1.5 leading-snug">
+            <div className="p-4 sm:p-5 flex flex-col flex-1">
+              <h3 className="font-serif font-semibold text-base sm:text-lg text-academic-green group-hover:text-saffron-gold-dark transition-colors mb-1 leading-snug">
                 {item.title}
               </h3>
               {item.description && (
