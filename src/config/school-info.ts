@@ -1,0 +1,45 @@
+import { SchoolConfig } from "@/types/school";
+
+export const SCHOOL_CONFIG: SchoolConfig = {
+  name: "Spring Dales Academy",
+  type: "Primary School",
+  mottoProposal: "Where young minds begin to grow",
+  location: {
+    street: "Tekar",
+    locality: "Patawa",
+    district: "Pratapgarh Region",
+    state: "Uttar Pradesh",
+    postalCode: "230401",
+    country: "India",
+    fullAddress: "Tekar, Patawa, Uttar Pradesh 230401, India",
+    googleMapsEmbedUrl: "",
+    googleMapsDirectionsUrl: "https://maps.google.com/?q=Tekar,+Patawa,+Uttar+Pradesh+230401",
+  },
+  schedule: {
+    monday: "9:00 AM – 1:00 PM",
+    tuesday: "9:00 AM – 1:00 PM",
+    wednesday: "9:00 AM – 1:00 PM",
+    thursday: "9:00 AM – 1:00 PM",
+    friday: "9:00 AM – 1:00 PM",
+    saturday: "9:00 AM – 1:00 PM",
+    sunday: "Closed",
+    summary: "Monday – Saturday: 9:00 AM – 1:00 PM",
+    holidayNotice: "School operating hours may vary during public holidays and local festivals.",
+  },
+  contacts: {
+    phone: "[Official contact number to be provided]",
+    phoneRaw: "",
+    email: "[Official school email to be provided]",
+    whatsapp: "",
+  },
+  gradesOffered: [
+    "Nursery",
+    "LKG (Lower Kindergarten)",
+    "UKG (Upper Kindergarten)",
+    "Class 1",
+    "Class 2",
+    "Class 3",
+    "Class 4",
+    "Class 5",
+  ],
+} as const;
