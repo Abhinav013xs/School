@@ -95,7 +95,7 @@ export const GALLERY_ITEMS: readonly GalleryItem[] = [
     id: "gal-11",
     title: "Athletics & Relay Games",
     description: "Annual sports day activities building agility and spirit.",
-    imageUrl: "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "/images/gallery-athletics.jpg",
     category: "activities",
     altText: "Young children in athletics activities",
     isPlaceholder: true,
