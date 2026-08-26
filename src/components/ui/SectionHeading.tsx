@@ -20,9 +20,9 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   ...props
 }) => {
   const alignClasses = {
-    left: "text-left items-start",
+    left: "text-center sm:text-left items-center sm:items-start mx-auto sm:mx-0",
     center: "text-center items-center mx-auto",
-    right: "text-right items-end ml-auto",
+    right: "text-center sm:text-right items-center sm:items-end mx-auto sm:ml-auto",
   };
 
   return (
@@ -44,7 +44,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       )}
       <h2
         className={cn(
-          "font-serif font-semibold tracking-tight leading-[1.2]",
+          "font-serif font-bold tracking-tight leading-[1.2]",
           "text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem]",
           isDark ? "text-canvas" : "text-academic-green"
         )}

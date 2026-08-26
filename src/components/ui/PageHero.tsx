@@ -31,7 +31,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
   return (
     <div
       className={cn(
-        "relative pt-12 sm:pt-16 pb-12 sm:pb-20 overflow-hidden",
+        "relative pt-10 sm:pt-16 pb-10 sm:pb-20 overflow-hidden",
         bgClasses[variant],
         className
       )}
@@ -43,19 +43,19 @@ export const PageHero: React.FC<PageHeroProps> = ({
 
       <Container size="default" className="relative z-10">
         {breadcrumbs && breadcrumbs.length > 0 && (
-          <div className="mb-6">
+          <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
             <Breadcrumb items={breadcrumbs} />
           </div>
         )}
 
-        <div className="max-w-3xl">
+        <div className="max-w-3xl flex flex-col items-center sm:items-start text-center sm:text-left mx-auto sm:mx-0">
           {eyebrow && (
-            <Badge variant="gold" className="mb-4">
+            <Badge variant="gold" className="mb-3 sm:mb-4">
               {eyebrow}
             </Badge>
           )}
 
-          <h1 className="font-serif font-semibold text-3xl sm:text-4xl md:text-5xl text-academic-green leading-[1.15] mb-4">
+          <h1 className="font-serif font-bold text-3xl sm:text-4xl md:text-5xl text-academic-green leading-[1.15] mb-3 sm:mb-4">
             {title}
           </h1>
 
@@ -63,7 +63,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
             {description}
           </p>
 
-          {children && <div className="mt-8">{children}</div>}
+          {children && <div className="mt-6 sm:mt-8 w-full">{children}</div>}
         </div>
       </Container>
     </div>

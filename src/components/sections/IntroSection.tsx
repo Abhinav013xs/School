@@ -35,7 +35,7 @@ export const IntroSection: React.FC = () => {
             </div>
 
             {/* Trust Quote Card */}
-            <div className="mt-4 p-4 rounded-2xl bg-canvas-alt border border-academic-green/10 text-left">
+            <div className="mt-4 p-4 rounded-2xl bg-canvas-alt border border-academic-green/10 text-center sm:text-left">
               <p className="font-serif italic text-sm text-academic-green">
                 “Every child’s educational journey begins with curiosity and a caring environment.”
               </p>
@@ -43,12 +43,12 @@ export const IntroSection: React.FC = () => {
           </div>
 
           {/* Right Narrative (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col items-start order-1 lg:order-2">
+          <div className="lg:col-span-7 flex flex-col items-center sm:items-start text-center sm:text-left order-1 lg:order-2">
             <Badge variant="gold" className="mb-3 sm:mb-4">
               WELCOME TO {SCHOOL_CONFIG.name.toUpperCase()}
             </Badge>
 
-            <h2 className="font-serif font-semibold text-2xl sm:text-3xl md:text-4xl text-academic-green leading-snug mb-5">
+            <h2 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-academic-green leading-snug mb-5">
               A Dedicated Primary School <br className="hidden sm:block" />
               Rooted in Care and Foundation.
             </h2>
@@ -60,8 +60,8 @@ export const IntroSection: React.FC = () => {
             {/* Value checklist */}
             <ul className="space-y-3 mb-8 w-full">
               {highlights.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm text-charcoal">
-                  <CheckCircle2 className="w-4 h-4 text-academic-green shrink-0 mt-0.5" />
+                <li key={item} className="flex items-center sm:items-start gap-2.5 text-sm text-charcoal justify-center sm:justify-start">
+                  <CheckCircle2 className="w-4 h-4 text-academic-green shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -71,6 +71,7 @@ export const IntroSection: React.FC = () => {
               variant="outline"
               size="md"
               href="/about"
+              className="shadow-sm"
             >
               Discover Our Approach
             </Button>

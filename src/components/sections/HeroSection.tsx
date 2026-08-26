@@ -16,7 +16,7 @@ export const HeroSection: React.FC = () => {
       <Container size="wide">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Narrative & Conversion Hierarchy (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
+          <div className="lg:col-span-7 flex flex-col items-center sm:items-start text-center sm:text-left z-10">
             {/* Eyebrow badge */}
             <div className="flex items-center gap-2 mb-4 sm:mb-6">
               <Badge variant="gold" size="md">
@@ -26,7 +26,7 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] text-academic-green leading-[1.12] tracking-tight mb-5 sm:mb-6">
+            <h1 className="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] text-academic-green leading-[1.15] tracking-tight mb-5 sm:mb-6">
               A Strong Beginning <br className="hidden sm:block" />
               <span className="text-academic-green-light">For A Brighter Future.</span>
             </h1>
@@ -37,12 +37,12 @@ export const HeroSection: React.FC = () => {
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-10">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3.5 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-10">
               <Button
                 variant="primary"
                 size="lg"
                 href="/admissions"
-                className="w-full sm:w-auto shadow-elevated"
+                className="w-full sm:w-auto shadow-elevated justify-center"
               >
                 Enquire for Admission
               </Button>
@@ -50,14 +50,14 @@ export const HeroSection: React.FC = () => {
                 variant="outline"
                 size="lg"
                 href="/about"
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto justify-center"
               >
                 Explore Our School
               </Button>
             </div>
 
             {/* Verified Location & Timing Pill */}
-            <div className="inline-flex flex-wrap items-center gap-y-2 gap-x-4 p-3 sm:p-3.5 rounded-2xl bg-canvas-surface/80 border border-academic-green/10 text-xs sm:text-sm text-charcoal-muted shadow-subtle">
+            <div className="inline-flex flex-wrap items-center justify-center sm:justify-start gap-y-2 gap-x-4 p-3 sm:p-3.5 rounded-2xl bg-canvas-surface/90 border border-academic-green/10 text-xs sm:text-sm text-charcoal-muted shadow-subtle text-center sm:text-left">
               <div className="flex items-center gap-1.5 font-medium text-academic-green">
                 <MapPin className="w-4 h-4 text-saffron-gold-dark shrink-0" />
                 <span>Tekar, Patawa, UP (230401)</span>
@@ -70,7 +70,7 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Right Column: Prestigious Private School Visual (5 cols) */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative w-full">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Decorative background framing border */}
               <div className="absolute -inset-3 sm:-inset-4 rounded-3xl border border-academic-green/10 -rotate-1 pointer-events-none" />

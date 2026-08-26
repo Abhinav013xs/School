@@ -18,21 +18,25 @@ export default function AcademicsPage() {
       icon: BookOpen,
       title: "Language & Reading",
       description: "Phonics, letter comprehension, vocabulary building, and guided story listening to establish expressive speech.",
+      image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=600&auto=format&fit=crop",
     },
     {
       icon: Calculator,
       title: "Early Mathematics & Logic",
       description: "Number sense, counting, spatial patterns, and practical problem-solving designed without anxiety.",
+      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop",
     },
     {
       icon: Globe,
-      title: "Environmental & Nature Awareness",
+      title: "Environmental Awareness",
       description: "Observing seasons, living beings, hygiene habits, and community awareness.",
+      image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=600&auto=format&fit=crop",
     },
     {
       icon: PencilRuler,
-      title: "Creative Arts & Motor Skills",
+      title: "Creative Arts & Craft",
       description: "Drawing, coloring, paper craft, and tactile activities to build fine motor control and imagination.",
+      image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=600&auto=format&fit=crop",
     },
   ];
 
@@ -55,23 +59,23 @@ export default function AcademicsPage() {
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-12">
-            <div className="p-8 rounded-3xl bg-canvas-surface border border-academic-green/15 shadow-subtle flex flex-col justify-between">
+            <div className="p-6 sm:p-8 rounded-3xl bg-canvas-surface border border-academic-green/15 shadow-subtle flex flex-col justify-between items-center sm:items-start text-center sm:text-left">
               <div>
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between w-full mb-4">
                   <Badge variant="gold" size="sm">
                     EARLY CHILDHOOD
                   </Badge>
                   <Sparkles className="w-5 h-5 text-saffron-gold" />
                 </div>
 
-                <h3 className="font-serif font-semibold text-2xl text-academic-green mb-3">
+                <h3 className="font-serif font-bold text-2xl text-academic-green mb-3">
                   Kindergarten (Nursery, LKG, UKG)
                 </h3>
                 <p className="text-sm text-charcoal-muted leading-relaxed mb-6">
                   Early childhood education at Spring Dales Academy centers on play, verbal expression, social confidence, and foundational motor coordination. Children learn to love school through songs, interactive toys, and story circles.
                 </p>
 
-                <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-academic-green/5 mb-4">
+                <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-academic-green/5 mb-4 w-full shadow-sm">
                   <Image
                     src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1000&auto=format&fit=crop"
                     alt="Early childhood kindergarten learning activities"
@@ -85,28 +89,28 @@ export default function AcademicsPage() {
                 </div>
               </div>
 
-              <div className="text-xs text-charcoal-subtle italic border-t border-academic-green/8 pt-3">
+              <div className="text-xs text-charcoal-subtle italic border-t border-academic-green/8 pt-3 w-full text-center sm:text-left">
                 Focus: Phonics • Counting • Social Play • Motor Skills
               </div>
             </div>
 
-            <div className="p-8 rounded-3xl bg-canvas-surface border border-academic-green/15 shadow-subtle flex flex-col justify-between">
+            <div className="p-6 sm:p-8 rounded-3xl bg-canvas-surface border border-academic-green/15 shadow-subtle flex flex-col justify-between items-center sm:items-start text-center sm:text-left">
               <div>
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between w-full mb-4">
                   <Badge variant="green" size="sm">
                     PRIMARY STAGE
                   </Badge>
                   <BookOpen className="w-5 h-5 text-academic-green" />
                 </div>
 
-                <h3 className="font-serif font-semibold text-2xl text-academic-green mb-3">
+                <h3 className="font-serif font-bold text-2xl text-academic-green mb-3">
                   Primary Classes (Class 1 to Class 5)
                 </h3>
                 <p className="text-sm text-charcoal-muted leading-relaxed mb-6">
                   Primary grade learning transitions students into structured subjects, building solid comprehension in reading, arithmetic, environmental studies, and moral science.
                 </p>
 
-                <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-academic-green/5 mb-4">
+                <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-academic-green/5 mb-4 w-full shadow-sm">
                   <Image
                     src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=1000&auto=format&fit=crop"
                     alt="Primary grade classroom with teacher guidance"
@@ -120,7 +124,7 @@ export default function AcademicsPage() {
                 </div>
               </div>
 
-              <div className="text-xs text-charcoal-subtle italic border-t border-academic-green/8 pt-3">
+              <div className="text-xs text-charcoal-subtle italic border-t border-academic-green/8 pt-3 w-full text-center sm:text-left">
                 Focus: Language • Mathematics • Environmental Studies • Moral Values
               </div>
             </div>
@@ -128,6 +132,7 @@ export default function AcademicsPage() {
         </Container>
       </section>
 
+      {/* Learning Domains with Photos */}
       <section className="py-16 sm:py-20 bg-canvas-alt border-y border-academic-green/8">
         <Container size="default">
           <SectionHeading
@@ -143,17 +148,33 @@ export default function AcademicsPage() {
               return (
                 <div
                   key={d.title}
-                  className="p-6 rounded-2xl bg-canvas-surface border border-academic-green/10 shadow-subtle flex flex-col"
+                  className="group rounded-3xl bg-canvas-surface border border-academic-green/10 shadow-subtle hover:-translate-y-1.5 hover:shadow-elevated transition-all duration-300 flex flex-col overflow-hidden items-center sm:items-start text-center sm:text-left"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-saffron-gold-dark mb-4">
-                    <Icon className="w-6 h-6" />
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-academic-green/5">
+                    <Image
+                      src={d.image}
+                      alt={d.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-academic-green-dark/60 via-transparent to-transparent opacity-60" />
+                    <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm text-[10px] text-white/90">
+                      Representational
+                    </div>
                   </div>
-                  <h3 className="font-serif font-semibold text-lg text-academic-green mb-2">
-                    {d.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-charcoal-muted leading-relaxed">
-                    {d.description}
-                  </p>
+
+                  <div className="p-6 flex flex-col flex-1 items-center sm:items-start text-center sm:text-left">
+                    <div className="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-saffron-gold-dark mb-4 shadow-sm shrink-0">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <h3 className="font-serif font-bold text-lg text-academic-green mb-2 leading-snug">
+                      {d.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-charcoal-muted leading-relaxed">
+                      {d.description}
+                    </p>
+                  </div>
                 </div>
               );
             })}

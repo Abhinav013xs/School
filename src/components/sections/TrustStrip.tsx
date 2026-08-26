@@ -27,7 +27,9 @@ export const TrustStrip: React.FC = () => {
           {tenets.map((tenet, idx) => (
             <div
               key={tenet.title}
-              className={`flex flex-col ${idx !== 0 ? "pt-6 md:pt-0 md:pl-6 lg:pl-10" : ""}`}
+              className={`flex flex-col text-center md:text-left items-center md:items-start ${
+                idx !== 0 ? "pt-6 md:pt-0 md:pl-6 lg:pl-10" : ""
+              }`}
             >
               <span className="font-serif font-bold text-amber-300 text-sm tracking-wider mb-2">
                 {tenet.number} • TENET
@@ -35,7 +37,7 @@ export const TrustStrip: React.FC = () => {
               <h3 className="font-serif font-semibold text-lg sm:text-xl text-canvas mb-2">
                 {tenet.title}
               </h3>
-              <p className="text-sm text-canvas/80 leading-relaxed">
+              <p className="text-sm text-canvas/80 leading-relaxed max-w-sm md:max-w-none">
                 {tenet.description}
               </p>
             </div>
